@@ -1,5 +1,5 @@
 // Setup empty JS object to act as endpoint for all routes
-projectData = {};
+let projectData = {};
 
 // Require Express to run server and routes
 const express = require('express');
@@ -38,14 +38,14 @@ function listening() {
 
 // GET method route
 app.get('/', function (req, res) {
-    res.send('GET request to the homepage')
+    res.send(projectData);
   })
 
   //POST route that adds incoming data to projectData.
   
   // POST method route
   app.post('/', function (req, res) {
-    res.send('POST request to the homepage')
+    res.send(projectData);
   })
 
   //Make sure your POST route is setup to add each of these values with a key to projectData.
