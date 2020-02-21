@@ -1,6 +1,6 @@
 /* Global Variables */
 let baseURL = 'api.openweathermap.org/data/2.5/weather?zip='
-let apiKey = '&appid=39067274dbce3644a3b8ef7c8c34939b';
+const apiKey = '&appid=39067274dbce3644a3b8ef7c8c34939b';
 
 
 document.getElementById('generate').addEventListener('click', performAction);
