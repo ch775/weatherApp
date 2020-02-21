@@ -1,0 +1,51 @@
+.entry {
+    display: flex;
+    flex-direction: row;
+}
+
+.warmTemp {
+    height: 60%;
+    width: auto;
+    margin-top: 2em;
+}
+
+.myInput { 
+    max-width: 34em;
+}
+
+#generate {
+    background-color: gray;
+    color: white;
+    max-width: 15em;
+    margin-top: 2em;
+    padding: 1em;
+}
+
+.feel {
+    display: flex;
+    flex-direction: column;
+}
+
+.holder {
+    margin-top: 2em; 
+}
+
+#app {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.infoHolder {
+    display: flex;
+    flex-direction: row;
+    margin: 1em;
+    align-items: center;
+}
+
+#temp, #date, #content, #name{
+    padding: 0.5em;
+}
+
+h2 {
+    margin: 0;
+}
