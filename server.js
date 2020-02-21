@@ -31,21 +31,9 @@ function listening() {
     console.log('server running');
     console.log(`running on localhost: ${port}`);
 };
-
-//After this help from Jeff 
-
 //Add GET route that returns the projectData object in your server code.
 
 // GET method route
-app.get('/', function (req, res) {
+app.get('/giveMeProjectData', function (req, res) {
     res.send(projectData);
   })
-
-  //POST route that adds incoming data to projectData.
-  
-  // POST method route
-  app.post('/', function (req, res) {
-    res.send(projectData);
-  })
-
-  //Make sure your POST route is setup to add each of these values with a key to projectData.

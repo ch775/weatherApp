@@ -2,12 +2,6 @@
 let baseURL = 'api.openweathermap.org/data/2.5/weather?zip='
 let apiKey = '&appid=39067274dbce3644a3b8ef7c8c34939b';
 
-// Create a new date instance dynamically with JS
-let d = new Date();
-let newDate = d.getMonth()+'.'+ d.getDate()+'.'+ d.getFullYear();
-
-
-//Ask Jeff -modified animal example
 
 document.getElementById('generate').addEventListener('click', performAction);
 
@@ -25,7 +19,29 @@ const getZip = async (baseURL, zip, key)=>{
   try {
 
     const data = await res.json();
-    console.log(data)
+  
+    //This is getting the name from the data 
+    let name = data.name;
+    //This adds the name  to the answer div
+    document.getElementById('name').innerHTML = name;
+
+    //This is getting the temp from the data 
+    let temp = data.main.temp;
+    //This adds the temp to the answer div
+    document.getElementById('temp').innerHTML = temp;
+
+    //This is getting the value from the input box feelings
+    const feelings =  document.getElementById('feelings').value;
+    //This is adding the input to the answer div
+    document.getElementById('content').innerHTML = feelings;
+
+    // Create a new date instance dynamically with JS
+    let d = new Date();
+     let newDate = d.getMonth()+1+'.'+ d.getDate()+'.'+ d.getFullYear();
+    //This is adding the date to the answer div
+    document.getElementById('date').innerHTML = newDate;
+
+
     return data;
   }  catch(error) {
     console.log("error", error);
@@ -33,15 +49,4 @@ const getZip = async (baseURL, zip, key)=>{
   }
 }
 
-const updateUI = async () => {
-    const request = await fetch('/');
-    try{
-      const allData = await request.json();
-      document.getElementById('date').innerHTML = allData[0].date;
-      document.getElementById('temp').innerHTML = allData[0].temp;
-      document.getElementById('content').innerHTML = allData[0].content;
-  
-    }catch(error){
-      console.log("error", error);
-    }
-  }
+
