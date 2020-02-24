@@ -20,6 +20,8 @@ const getZip = async (baseURL, zip, key)=>{
 
     const data = await res.json();
   
+    console.log(data);
+
     //This is getting the name from the data 
     let name = data.name;
     //This adds the name  to the answer div
