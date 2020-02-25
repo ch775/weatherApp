@@ -1,6 +1,7 @@
 /* Global Variables */
 let baseURL = 'api.openweathermap.org/data/2.5/weather?zip='
 const apiKey = '&appid=39067274dbce3644a3b8ef7c8c34939b';
+const imperial = '&units=imperial'
 
 
 document.getElementById('generate').addEventListener('click', performAction);
@@ -15,7 +16,7 @@ getZip(baseURL,newZip, apiKey)
 }
 const getZip = async (baseURL, zip, key)=>{
 
-  const res = await fetch('https://api.openweathermap.org/data/2.5/weather?zip='+zip+key)
+  const res = await fetch('https://api.openweathermap.org/data/2.5/weather?zip='+zip+key+imperial)
   try {
 
     const data = await res.json();
