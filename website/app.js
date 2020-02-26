@@ -1,6 +1,6 @@
 /* Global Variables */
 let baseURL = 'api.openweathermap.org/data/2.5/weather?zip='
-const apiKey = '&appid=39067274dbce3644a3b8ef7c8c34939b';
+const apiKey = '';
 const imperial = '&units=imperial'
 
 
